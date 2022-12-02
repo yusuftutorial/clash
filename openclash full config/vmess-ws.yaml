@@ -1,16 +1,17 @@
 proxies:
-- name: cekekstraunli-apachmad1.kitu.xyz
+- name: namaakunmu
   type: vmess
-  server: insert host
+  server: bugmu.com
   port: 443
-  uuid: insert pass
-  alterId: insert id
+  uuid: 0b9a5b20-7240-11ed-8a8e-1239d0255272
+  alterId: 0
   cipher: auto
   udp: true
   skip-cert-verify: true
   tls: true
-  servername: domain.com
+  servername: akunku-vmess.mwns.com
   network: ws
-  ws-path: "/insert path/"
-  ws-headers:
-    Host: domain.com
+  ws-opts:
+    path: /pathakunmu
+    headers:
+      Host: akunku-vmess.mwns.com
