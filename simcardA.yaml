@@ -1,9 +1,0 @@
-proxies:
-- name: s1
-  type: trojan
-  server: sg1-trojan.bonds.id
-  port: 443
-  password: 00f2ebc0-d807-11ed-b8f4-1239d0255272
-  udp: true
-  sni: investors.spotify.com
-  skip-cert-verify: true
