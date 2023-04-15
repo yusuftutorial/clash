@@ -156,46 +156,46 @@ proxy-providers:
   SIMCARD:
     type: file
     path: ./simcard.yaml
-    url: https://raw.githubusercontent.com/mwnsofficial/simaster-auto/main/proxy_provider/simcard.yaml
+    url: https://raw.githubusercontent.com/mwnsofficial/openclash/main/simcard.yaml
     interval: 3600
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 99
 proxy-groups:
-- name: SIMASTER-AUTO
+- name: ID-TECH-CHANNEL
   type: select
   disable-udp: false
   proxies:
-  - SIMCARD-SELECT
-  - SIMCARD-PING
-  - SIMCARD-FALLBACK
-  - SIMCARD-LOADBALANCE
+  - SELECT
+  - PING
+  - FALLBACK
+  - LOADBALANCE
   - DIRECT
   url: http://www.gstatic.com/generate_204
   interval: '99'
-- name: SIMCARD-SELECT
+- name: SELECT
   type: select
   disable-udp: false
   use:
   - SIMCARD
   url: http://www.gstatic.com/generate_204
   interval: '99'
-- name: SIMCARD-PING
+- name: PING
   type: url-test
   disable-udp: false
   use:
   - SIMCARD
   url: http://www.gstatic.com/generate_204
   interval: '99'
-- name: SIMCARD-FALLBACK
+- name: FALLBACK
   type: fallback
   disable-udp: false
   use:
   - SIMCARD
   url: http://www.gstatic.com/generate_204
   interval: '99'
-- name: SIMCARD-LOADBALANCE
+- name: LOADBALANCE
   type: load-balance
   strategy: round-robin
   disable-udp: false
@@ -203,90 +203,36 @@ proxy-groups:
   - SIMCARD
   url: http://www.gstatic.com/generate_204
   interval: '99'
-- name: WHATSAPP
+  url: http://www.gstatic.com/generate_204
+  interval: '99'
+- name: TCP-UDP
   type: select
   disable-udp: false
   proxies:
-  - SIMCARD-SELECT
-  - SIMCARD-PING
-  - SIMCARD-FALLBACK
-  - SIMCARD-LOADBALANCE
+  - SELECT
+  - PING
+  - FALLBACK
+  - LOADBALANCE
   - DIRECT
   url: http://www.gstatic.com/generate_204
   interval: '99'
-- name: GAMING
-  type: select
-  disable-udp: false
-  proxies:
-  - SIMCARD-SELECT
-  - SIMCARD-PING
-  - SIMCARD-FALLBACK
-  - SIMCARD-LOADBALANCE
-  - DIRECT
-  url: http://www.gstatic.com/generate_204
-  interval: '99'
-rule-providers:
-  Game:
-    type: file
-    behavior: domain
-    path: ./rule-game.yaml
-    url: https://bit.ly/3X2SvcL
-    interval: 3600
-  Sosmed:
-    type: file
-    behavior: domain
-    path: ./rule-sosmed.yaml
-    url: https://bit.ly/3I4HG5I
-    interval: 3600
-  Stream:
-    type: file
-    behavior: domain
-    path: ./rule-stream.yaml
-    url: https://bit.ly/3PU6RJP
-    interval: 3600
-  Olshop:
-    type: file
-    behavior: domain
-    path: ./rule-olshop.yaml
-    url: https://bit.ly/3Wp85PH
-    interval: 3600
-  Bank:
-    type: file
-    behavior: domain
-    path: ./rule-bank.yaml
-    url: https://bit.ly/3hN7JUh
-    interval: 3600
-  Whatsapp:
-    type: file
-    behavior: domain
-    path: ./rule-whatsapp.yaml
-    url: http://bit.ly/3Vkdh6g
-    interval: 3600
 script:
   code: |
     def main(ctx, metadata):
-        ruleset_action = {"Game": "GAMING",
-            "Sosmed": "SIMASTER-AUTO",
-            "Stream": "SIMASTER-AUTO",
-            "Olshop": "SIMASTER-AUTO",
-            "Bank": "SIMASTER-AUTO",
-            "Whatsapp": "WHATSAPP",
-          }
-
         port = int(metadata["dst_port"])
 
         if metadata["network"] == "UDP":
             if port == "21,22,23,53,80,443,8443":
-                ctx.log('[Script] matched QUIC traffic use SIMASTER-AUTO')
-                return "SIMASTER-AUTO"
+                ctx.log('[Script] matched QUIC traffic use TCP-UDP')
+                return "TCP-UDP"
 
         if metadata["dst_ip"] == "":
             metadata["dst_ip"] = ctx.resolve_ip(metadata["host"])
 
         port_list = [21, 22, 23, 53, 80, 81, 123, 443, 853, 5353, 8000, 8008, 8080, 8081, 8090, 8443, 8888, 9993]
         if port not in port_list:
-            ctx.log('[Script] not common port use GAMING')
-            return "GAMING"
+            ctx.log('[Script] not common port use TCP-UDP')
+            return "TCP-UDP"
 
         if metadata["dst_ip"] == "":
             return "DIRECT"
@@ -298,20 +244,14 @@ script:
         code = ctx.geoip(metadata["dst_ip"])
         if code == "ID":
             ctx.log('[Script] Geoip ID')
-            return "SIMASTER-AUTO"
+            return "ID-TECH-CHANNEL"
 
-        ctx.log('[Script] SIMASTER-AUTO')
-        return "SIMASTER-AUTO"
+        ctx.log('[Script] ID-TECH-CHANNEL')
+        return "ID-TECH-CHANNEL"
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- RULE-SET,Game,GAMING
-- RULE-SET,Sosmed,SIMASTER-AUTO
-- RULE-SET,Stream,SIMASTER-AUTO
-- RULE-SET,Olshop,SIMASTER-AUTO
-- RULE-SET,Bank,SIMASTER-AUTO
-- RULE-SET,Whatsapp,WHATSAPP
-- GEOIP,ID,SIMASTER-AUTO
-- MATCH,SIMASTER-AUTO
+- GEOIP,ID,ID-TECH-CHANNEL
+- MATCH,ID-TECH-CHANNEL
 tun:
   enable: true
   stack: system
