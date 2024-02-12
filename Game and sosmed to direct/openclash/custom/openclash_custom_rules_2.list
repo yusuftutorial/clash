@@ -1,8 +1,0 @@
-##- DOMAIN-SUFFIX,google.com,Proxy Match the domain name suffix (submitted to the Proxy proxy server group)
-##- DOMAIN-KEYWORD,google,Proxy Match domain name keywords (submitted to the Proxy proxy server group)
-##- DOMAIN,google.com,Proxy Matching domain name (submitted to the Proxy server group)
-##- DOMAIN-SUFFIX,ad.com,REJECT Match the domain name suffix (rejected)
-##- IP-CIDR,127.0.0.0/8,DIRECT Match data target IP (direct connection)
-##- SRC-IP-CIDR,192.168.1.201/32,DIRECT Match data to initiate IP (direct connection)
-##- DST-PORT,80,DIRECT Matching data destination port (direct connection)
-##- SRC-PORT,7777,DIRECT Matching data source port (direct connection)
