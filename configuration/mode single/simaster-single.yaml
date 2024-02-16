@@ -375,19 +375,19 @@ rule-providers:
     path: ./rule_provider/porn.yaml
     interval: 3600
   Iklan1:
-    type: file
+    type: http
     behavior: classical
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/iklan.yaml
     path: ./rule_provider/iklan1.yaml
     interval: 3600
   Iklan2:
-    type: file
+    type: http
     behavior: classical
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/iklan2.yaml
     path: ./rule_provider/iklan2.yaml
     interval: 3600
   Iklan3:
-    type: file
+    type: http
     behavior: classical
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/iklan3.yaml
     path: ./rule_provider/iklan3.yaml
