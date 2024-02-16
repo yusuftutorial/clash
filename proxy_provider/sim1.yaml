@@ -1,9 +1,9 @@
 proxies:
-- name: Trojan GFW
+- name: jalur sim1
+  server: id-1.test3.net
   type: trojan
-  server: SERVER.COM
   port: 443
-  password: PASSWORD
+  password: 5b1c5880-bd2e-11ee-9bee-1239d0255272
   udp: true
-  sni: BUGSNI.COM
+  sni: bug.com
   skip-cert-verify: true
