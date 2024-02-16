@@ -197,9 +197,11 @@ dns:
   - "+.media.dssott.com"
   - "+.dns.google"
 proxy-providers:
-  MODEM:
-    type: file
-    path: ./proxy_provider/modem1.yaml
+  Sim1:
+    type: http
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/proxy_provider/sim1.yaml
+    interval: 3600
+    path: ./proxy_provider/sim1.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -219,14 +221,14 @@ proxy-groups:
   type: select
   disable-udp: false
   use:
-  - MODEM
+  - Sim1
   url: http://www.gstatic.com/generate_204
   interval: '99'
 - name: PING
   type: url-test
   disable-udp: false
   use:
-  - MODEM
+  - Sim1
   url: http://www.gstatic.com/generate_204
   interval: '99'
 - name: LB
@@ -234,7 +236,7 @@ proxy-groups:
   strategy: round-robin
   disable-udp: false
   use:
-  - MODEM
+  - Sim1
   url: http://www.gstatic.com/generate_204
   interval: '99'
 - name: SOSMED
@@ -325,49 +327,71 @@ proxy-groups:
   interval: '99'
 rule-providers:
   Sosmed:
-    type: file
+    type: http
     behavior: classical
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/sosmed.yaml
     path: ./rule_provider/sosmed.yaml
+    interval: 3600
   Stream:
-    type: file
+    type: http
     behavior: domain
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/stream.yaml
     path: ./rule_provider/stream.yaml
+    interval: 3600
   Game:
-    type: file
+    type: http
     behavior: domain
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/game.yaml
     path: ./rule_provider/game.yaml
+    interval: 3600
   Olshop:
-    type: file
+    type: http
     behavior: domain
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/olshop.yaml
     path: ./rule_provider/olshop.yaml
+    interval: 3600
   Shopee:
-    type: file
+    type: http
     behavior: classical
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/shopee.yaml
     path: ./rule_provider/shopee.yaml
+    interval: 3600
   Bank:
-    type: file
+    type: http
     behavior: domain
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/bank.yaml
     path: ./rule_provider/bank.yaml
+    interval: 3600
   Chat:
-    type: file
+    type: http
     behavior: classical
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/chat.yaml
     path: ./rule_provider/chat.yaml
+    interval: 3600
   Porn:
-    type: file
+    type: http
     behavior: domain
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/porn.yaml
     path: ./rule_provider/porn.yaml
+    interval: 3600
   Iklan1:
     type: file
     behavior: classical
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/iklan.yaml
     path: ./rule_provider/iklan1.yaml
+    interval: 3600
   Iklan2:
     type: file
     behavior: classical
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/iklan2.yaml
     path: ./rule_provider/iklan2.yaml
+    interval: 3600
   Iklan3:
     type: file
     behavior: classical
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/iklan3.yaml
     path: ./rule_provider/iklan3.yaml
+    interval: 3600
 script:
   code: |
     def main(ctx, metadata):
