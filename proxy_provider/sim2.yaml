@@ -1,17 +1,17 @@
 proxies:
 - name: Vmess WS
   type: vmess
-  server: SERVER.COM
+  server: vmess-rs-us01.globalssh.xyz
   port: 443
-  uuid: UUID
+  uuid: 53d186d0-876b-4d25-9a2f-bc402433d41f
   alterId: 0
   cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: BUGSNI.COM
+  servername: bug.com
   network: ws
   ws-opts:
-    path: /PATH
+    path: /vmess-ws
     headers:
-      Host: BUGSNI.COM
+      Host: bug.com
