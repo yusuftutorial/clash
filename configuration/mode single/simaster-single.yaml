@@ -377,7 +377,7 @@ rule-providers:
   Iklan1:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/iklan.yaml
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/iklan1.yaml
     path: ./rule_provider/iklan1.yaml
     interval: 3600
   Iklan2:
