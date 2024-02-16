@@ -1,0 +1,9 @@
+proxies:
+- name: Trojan GFW
+  type: trojan
+  server: SERVER.COM
+  port: 443
+  password: PASSWORD
+  udp: true
+  sni: BUGSNI.COM
+  skip-cert-verify: true

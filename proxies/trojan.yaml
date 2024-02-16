@@ -1,3 +1,4 @@
+proxies:
 # Trojan GFW
 - name: Trojan GFW
   type: trojan
