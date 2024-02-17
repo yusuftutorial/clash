@@ -12,3 +12,28 @@ Ada 4 type clash yang saya buatkan khusus untuk anda
 > jadi 4 type ini yang bisa kalian dapatkan disini tanpa terkecuali adanya banyak permintaan dari anda semua.
 
 Kalian bisa melihat nya hanya di [yusuftutorial.xyz](https://yusuftutorial.xyz)
+
+## Support Yusuf Tutorial
+
+[Saweria](https://saweria.co/yusuftutorial)
+
+[Trakteer](https://trakteer.id/yusuftutorialchannel/tip)
+
+[PayPal](https://paypal.me/myarachma92)
+
+[KoFi](https://ko-fi.com/masterwifinetworksolution)
+
+[SociaBuzz](https://sociabuzz.com/yusuftutorialchannel)
+
+[Dana / ShopeePay]
+
+```
+087764241047
+```
+
+[Bank BRI]
+
+```
+453401017095532
+MUHAMMAD YUSUF
+```
