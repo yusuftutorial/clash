@@ -13,6 +13,8 @@ Ada 4 type clash yang saya buatkan khusus untuk anda
 
 Kalian bisa melihat nya hanya di [yusuftutorial.xyz](https://yusuftutorial.xyz)
 
+Atau di channel resmi youtube saya di [Yusuf Tutorial Channel](https://youtube.com/@yusuftutorialchannel)
+
 ## Support Yusuf Tutorial
 
 [Saweria](https://saweria.co/yusuftutorial)
