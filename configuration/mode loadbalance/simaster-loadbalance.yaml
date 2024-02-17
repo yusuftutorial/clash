@@ -10,7 +10,7 @@ mode: script
 log-level: info
 ipv6: false
 external-controller: 0.0.0.0:9090
-external-ui: "/usr/share/openclash/dashboard"
+external-ui: "/usr/share/openclash/ui"
 secret: reyre
 tun:
   enable: true
