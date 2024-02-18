@@ -54,7 +54,7 @@ dns:
   - tls://dns.google
 proxy-providers:
   Sim:
-    type: file
+    type: http
     path: ./sim1.yaml
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/proxy_provider/sim1.yaml
     interval: 3600
