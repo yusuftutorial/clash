@@ -55,7 +55,7 @@ dns:
 proxy-providers:
   Sim:
     type: http
-    path: ./sim1.yaml
+    path: ./pribadi.yaml
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/pribadi.yaml
     interval: 3600
     health-check:
