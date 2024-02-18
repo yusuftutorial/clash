@@ -125,67 +125,67 @@ rule-providers:
     type: http
     behavior: domain
     path: ./rule_provider/Game.yaml
-    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/game.yaml
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/game.yaml
     interval: 3600
   Sosmed:
     type: http
     behavior: classical
     path: ./rule_provider/Sosmed.yaml
-    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/sosmed.yaml
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/sosmed.yaml
     interval: 3600
   Stream:
     type: http
     behavior: domain
     path: ./rule_provider/Stream.yaml
-    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/stream.yaml
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/stream.yaml
     interval: 3600
   Olshop:
     type: http
     behavior: domain
     path: ./rule_provider/Olshop.yaml
-    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/olshop.yaml
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/olshop.yaml
     interval: 3600
   Shopee:
     type: http
     behavior: classical
     path: ./rule_provider/Shopee.yaml
-    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/shopee.yaml
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/shopee.yaml
     interval: 3600
   Bank:
     type: http
     behavior: domain
     path: ./rule_provider/Bank.yaml
-    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/bank.yaml
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/bank.yaml
     interval: 3600
   Chat:
     type: http
     behavior: classical
     path: ./rule_provider/Chat.yaml
-    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/chat.yaml
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/chat.yaml
     interval: 3600
   Porn:
     type: http
     behavior: domain
     path: ./rule_provider/Porn.yaml
-    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/porn.yaml
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/porn.yaml
     interval: 3600
   Iklan1:
     type: http
     behavior: classical
     path: ./rule_provider/Iklan1.yaml
-    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/iklan1.yaml
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/iklan1.yaml
     interval: 3600
   Iklan2:
     type: http
     behavior: classical
     path: ./rule_provider/Iklan2.yaml
-    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/iklan2.yaml
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/iklan2.yaml
     interval: 3600
   Iklan3:
     type: http
     behavior: classical
     path: ./rule_provider/Iklan3.yaml
-    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/iklan3.yaml
+    url: https://raw.githubusercontent.com/yusuftutorial/clash/main/rule_provider/iklan3.yaml
     interval: 3600
 script:
   code: |
