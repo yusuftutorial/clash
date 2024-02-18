@@ -126,67 +126,67 @@ rule-providers:
   Game:
     type: http
     behavior: domain
-    path: "./Game.yaml"
+    path: "./rule_provider/Game.yaml"
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/game.yaml
     interval: 3600
   Sosmed:
     type: http
     behavior: classical
-    path: "./Sosmed.yaml"
+    path: "./rule_provider/Sosmed.yaml"
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/sosmed.yaml
     interval: 3600
   Stream:
     type: http
     behavior: domain
-    path: "./Stream.yaml"
+    path: "./rule_provider/Stream.yaml"
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/stream.yaml
     interval: 3600
   Olshop:
     type: http
     behavior: domain
-    path: "./Olshop.yaml"
+    path: "./rule_provider/Olshop.yaml"
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/olshop.yaml
     interval: 3600
   Shopee:
     type: http
     behavior: classical
-    path: "./Shopee.yaml"
+    path: "./rule_provider/Shopee.yaml"
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/shopee.yaml
     interval: 3600
   Bank:
     type: http
     behavior: domain
-    path: "./Bank.yaml"
+    path: "./rule_provider/Bank.yaml"
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/bank.yaml
     interval: 3600
   Chat:
     type: http
     behavior: classical
-    path: "./Chat.yaml"
+    path: "./rule_provider/Chat.yaml"
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/chat.yaml
     interval: 3600
   Porn:
     type: http
     behavior: domain
-    path: "./Porn.yaml"
+    path: "./rule_provider/Porn.yaml"
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/porn.yaml
     interval: 3600
   Iklan1:
     type: http
     behavior: classical
-    path: "./Iklan1.yaml"
+    path: "./rule_provider/Iklan1.yaml"
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/iklan1.yaml
     interval: 3600
   Iklan2:
     type: http
     behavior: classical
-    path: "./Iklan2.yaml"
+    path: "./rule_provider/Iklan2.yaml"
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/iklan2.yaml
     interval: 3600
   Iklan3:
     type: http
     behavior: classical
-    path: "./Iklan3.yaml"
+    path: "./rule_provider/Iklan3.yaml"
     url: https://raw.githubusercontent.com/yusuftutorial/clash/main/iklan3.yaml
     interval: 3600
 script:
